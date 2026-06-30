@@ -31,7 +31,7 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale])
 
   return (
-    <div className="sticky top-24 md:top-32 h-[85vh] flex items-center justify-center">
+    <div className="sticky top-24 md:top-32 h-[85vh] flex items-start justify-center">
       <motion.div
         style={{
           scale,

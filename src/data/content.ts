@@ -108,10 +108,11 @@ export const projects: Project[] = [
     name: 'Porous Lattices for Implants',
     category: 'Research Collaboration',
     description:
-      'Systematic review of porous and lattice structures for implants — design for AM, porosity, osseointegration, and material selection (Ti-6Al-4V, NiTi).',
+      'Scoping review of lattice and TPMS architectures for dental implants — design, manufacturing, and performance. Protocol accepted and registered on OSF.',
     col1: ['/thesis/lattice-array.jpg', '/thesis/ebsd.jpg'],
     col2: '/thesis/void-fraction.jpg',
-    linkLabel: 'In Progress',
+    link: 'https://doi.org/10.17605/OSF.IO/UMBVD',
+    linkLabel: 'View Protocol',
   },
   {
     num: '04',
@@ -235,6 +236,7 @@ export type Publication = {
   title: string
   venue: string
   meta: string
+  link?: string
 }
 
 export const publications: Publication[] = [
@@ -244,6 +246,7 @@ export const publications: Publication[] = [
       'Experimental and numerical crushing analysis of a novel multibody thin-walled circular tube under axial impact loading',
     venue: 'International Journal of Applied Mechanics',
     meta: 'Mozafari, Azarandaz, Darijani & Shahsavari · 2022 · 14(09), 2250042',
+    link: 'https://www.worldscientific.com/doi/10.1142/S1758825122500429',
   },
   {
     type: 'Conference',
@@ -251,6 +254,14 @@ export const publications: Publication[] = [
       'A Comparative Multi-Method Study of Uniform and Graded TPMS Lattices Fabricated via Additive Manufacturing',
     venue: '4th International Online Conference on Materials, MDPI',
     meta: '2025',
+  },
+  {
+    type: 'Protocol',
+    title:
+      'Lattice and TPMS Architectures for Dental Implants: A Scoping Review of Design, Manufacturing, and Performance',
+    venue: 'OSF Registries — accepted protocol',
+    meta: 'DOI: 10.17605/OSF.IO/UMBVD',
+    link: 'https://doi.org/10.17605/OSF.IO/UMBVD',
   },
   {
     type: 'In Preparation',

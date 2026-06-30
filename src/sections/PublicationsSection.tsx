@@ -1,3 +1,4 @@
+import { ArrowUpRight } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
 import { publications } from '../data/content'
 
@@ -31,9 +32,27 @@ export default function PublicationsSection() {
             </div>
 
             <div className="flex-1">
-              <h3 className="text-[#D7E2EA] font-medium leading-snug text-base sm:text-lg">
-                {pub.title}
-              </h3>
+              {pub.link ? (
+                <a
+                  href={pub.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link inline-flex items-start gap-1.5 text-[#D7E2EA] font-medium leading-snug text-base sm:text-lg hover:text-white transition-colors"
+                >
+                  <span className="underline decoration-[#D7E2EA]/25 underline-offset-4 group-hover/link:decoration-[#D7E2EA]">
+                    {pub.title}
+                  </span>
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={2}
+                    className="mt-1 shrink-0 opacity-60 group-hover/link:opacity-100"
+                  />
+                </a>
+              ) : (
+                <h3 className="text-[#D7E2EA] font-medium leading-snug text-base sm:text-lg">
+                  {pub.title}
+                </h3>
+              )}
               <p className="text-[#D7E2EA]/70 font-light italic mt-1 text-sm sm:text-base">
                 {pub.venue}
               </p>

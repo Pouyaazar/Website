@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="sb" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#EAF2F7"/><stop offset="100%" stop-color="#93a2af"/></linearGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#bfe9f5"/><stop offset="100%" stop-color="#74acc0"/></linearGradient>
+<filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+<feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="20"/></filter>
+</defs>
+<circle cx="200" cy="200" r="130" fill="#4f8aa3" opacity="0.28" filter="url(#soft)"/><ellipse cx="200" cy="200" rx="130" ry="50" fill="none" stroke="url(#sb)" stroke-width="3" opacity="0.85"/><ellipse cx="200" cy="200" rx="110" ry="42" fill="none" stroke="url(#sb)" stroke-width="2" opacity="0.5"/><ellipse cx="200" cy="200" rx="150" ry="58" fill="none" stroke="url(#sb)" stroke-width="2" opacity="0.35"/><g filter="url(#glow)"><rect x="178" y="166" width="44" height="68" rx="20" fill="#16202a" stroke="url(#acc)" stroke-width="2.6"/></g><g filter="url(#glow)"><path d="M299.6 168.2 A130 49.4 0 0 1 299.6 231.8" fill="none" stroke="#bfe9f5" stroke-width="4" opacity="0.9" stroke-linecap="round"/></g><line x1="311.1" y1="164.6" x2="290.4" y2="171.2" stroke="#EAF2F7" stroke-width="1.4" opacity="0.4"/><line x1="332.5" y1="177.6" x2="307.8" y2="181.8" stroke="#EAF2F7" stroke-width="1.4" opacity="0.4"/><line x1="343.6" y1="192.3" x2="316.9" y2="193.8" stroke="#EAF2F7" stroke-width="1.4" opacity="0.4"/><line x1="343.6" y1="207.7" x2="316.9" y2="206.2" stroke="#EAF2F7" stroke-width="1.4" opacity="0.4"/><line x1="332.5" y1="222.4" x2="307.8" y2="218.2" stroke="#EAF2F7" stroke-width="1.4" opacity="0.4"/><line x1="311.1" y1="235.4" x2="290.4" y2="228.8" stroke="#EAF2F7" stroke-width="1.4" opacity="0.4"/></svg>

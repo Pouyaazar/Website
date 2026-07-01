@@ -75,8 +75,7 @@ export type Project = {
   name: string
   category: string
   description: string
-  col1: [string, string]
-  col2: string
+  image: string
   link?: string
   linkLabel?: string
 }
@@ -88,8 +87,7 @@ export const projects: Project[] = [
     category: 'M.Sc. Thesis · Politecnico di Torino',
     description:
       'Uniform and functionally graded TPMS lattices (FRD, Gyroid, Fischer–Koch–S) built by L-PBF in AlSi10Mg; CT/SEM characterisation and an Abaqus model validated against experiment (R² = 0.853).',
-    col1: ['/thesis/tpms-cells.jpg', '/thesis/sem-micrograph.jpg'],
-    col2: '/thesis/lattice-cube-a.jpg',
+    image: '/concept/concept-01.svg',
     link: 'https://webthesis.biblio.polito.it/36721/',
     linkLabel: 'View Thesis',
   },
@@ -99,8 +97,7 @@ export const projects: Project[] = [
     category: 'Academic Project',
     description:
       'Supervised machine learning (Python, MATLAB, KNIME) applied to L-PBF datasets to optimise process parameters.',
-    col1: ['/thesis/powder-grid.jpg', '/thesis/compression-curves.jpg'],
-    col2: '/thesis/fea-cube.jpg',
+    image: '/concept/concept-02.svg',
     linkLabel: 'In Preparation',
   },
   {
@@ -109,8 +106,7 @@ export const projects: Project[] = [
     category: 'Research Collaboration',
     description:
       'Scoping review of lattice and TPMS architectures for dental implants — design, manufacturing, and performance. Protocol accepted and registered on OSF.',
-    col1: ['/thesis/lattice-array.jpg', '/thesis/ebsd.jpg'],
-    col2: '/thesis/void-fraction.jpg',
+    image: '/concept/concept-03.svg',
     link: 'https://doi.org/10.17605/OSF.IO/UMBVD',
     linkLabel: 'View Protocol',
   },
@@ -120,8 +116,7 @@ export const projects: Project[] = [
     category: 'B.Sc. Thesis · Published in IJAM',
     description:
       'Experimental and numerical (FEA) crush analysis of a novel multibody thin-walled tube under axial impact; multi-objective optimisation lowered peak crush force and raised specific energy absorption.',
-    col1: ['/thesis/crush-tubes.jpg', '/thesis/crush-curves.jpg'],
-    col2: '/thesis/crush-modes.jpg',
+    image: '/concept/concept-04.svg',
     link: 'https://www.worldscientific.com/doi/10.1142/S1758825122500429',
     linkLabel: 'Read Paper',
   },

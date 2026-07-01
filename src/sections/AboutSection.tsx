@@ -5,15 +5,12 @@ import ContactButton from '../components/ContactButton'
 const ABOUT_TEXT =
   "With a master's centred on additive manufacturing, i design porous, lattice-based structures and prove how they behave through x-ray ct, standardised compression testing, and finite-element modelling. i turn structure into measured performance. Let's build something rigorous together!"
 
+// Four research-themed icons, matching the Expertise section's core pillars.
 const decor = {
-  moon:
-    'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png',
-  object:
-    'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png',
-  lego:
-    'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png',
-  group:
-    'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png',
+  lattice: { src: '/concept/icon-lattice.svg', alt: 'TPMS lattice unit cell' },
+  lpbf: { src: '/concept/icon-lpbf.svg', alt: 'Laser powder bed fusion build' },
+  xct: { src: '/concept/icon-xct.svg', alt: 'X-ray computed tomography scan' },
+  fea: { src: '/concept/icon-fea.svg', alt: 'Finite element stress contour' },
 }
 
 export default function AboutSection() {
@@ -23,7 +20,7 @@ export default function AboutSection() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 sm:px-8 md:px-10 py-20"
       style={{ background: '#0C0C0C' }}
     >
-      {/* Decorative 3D corners */}
+      {/* Decorative research-themed corners */}
       <FadeIn
         delay={0.1}
         x={-80}
@@ -31,7 +28,7 @@ export default function AboutSection() {
         duration={0.9}
         className="pointer-events-none absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[120px] sm:w-[160px] md:w-[210px]"
       >
-        <img src={decor.moon} alt="" className="w-full h-auto" />
+        <img src={decor.lattice.src} alt={decor.lattice.alt} className="w-full h-auto" />
       </FadeIn>
 
       <FadeIn
@@ -41,7 +38,7 @@ export default function AboutSection() {
         duration={0.9}
         className="pointer-events-none absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[120px] sm:w-[160px] md:w-[210px]"
       >
-        <img src={decor.lego} alt="" className="w-full h-auto" />
+        <img src={decor.lpbf.src} alt={decor.lpbf.alt} className="w-full h-auto" />
       </FadeIn>
 
       <FadeIn
@@ -51,7 +48,7 @@ export default function AboutSection() {
         duration={0.9}
         className="pointer-events-none absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[100px] sm:w-[140px] md:w-[180px]"
       >
-        <img src={decor.object} alt="" className="w-full h-auto" />
+        <img src={decor.xct.src} alt={decor.xct.alt} className="w-full h-auto" />
       </FadeIn>
 
       <FadeIn
@@ -61,7 +58,7 @@ export default function AboutSection() {
         duration={0.9}
         className="pointer-events-none absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] w-[130px] sm:w-[170px] md:w-[220px]"
       >
-        <img src={decor.group} alt="" className="w-full h-auto" />
+        <img src={decor.fea.src} alt={decor.fea.alt} className="w-full h-auto" />
       </FadeIn>
 
       {/* Content */}

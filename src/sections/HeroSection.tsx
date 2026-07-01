@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
-const PORTRAIT_URL = '/portrait.jpg'
+const PORTRAIT_URL = '/portrait.png'
 
 export default function HeroSection() {
   return (
@@ -41,9 +41,9 @@ export default function HeroSection() {
           as="h1"
           delay={0.15}
           y={40}
-          className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full mt-6 sm:mt-4 md:-mt-5 text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]"
+          className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full mt-6 sm:mt-4 md:-mt-5 text-[12vw]"
         >
-          Hi, i&apos;m pouya
+          Hi, I&apos;m Pouya
         </FadeIn>
       </div>
 

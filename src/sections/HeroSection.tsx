@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import Magnet from '../components/Magnet'
 import ContactButton from '../components/ContactButton'
@@ -6,6 +7,7 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Expertise', href: '#expertise' },
   { label: 'Projects', href: '#projects' },
+  { label: 'CAD', href: '/cad' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -24,15 +26,19 @@ export default function HeroSection() {
         y={-20}
         className="relative z-20 flex items-center justify-between px-6 md:px-10 pt-6 md:pt-8"
       >
-        {navLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70"
-          >
-            {link.label}
-          </a>
-        ))}
+        {navLinks.map((link) => {
+          const cls =
+            'text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70'
+          return link.href.startsWith('#') ? (
+            <a key={link.label} href={link.href} className={cls}>
+              {link.label}
+            </a>
+          ) : (
+            <Link key={link.label} to={link.href} className={cls}>
+              {link.label}
+            </Link>
+          )
+        })}
       </FadeIn>
 
       {/* Hero heading */}

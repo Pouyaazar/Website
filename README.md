@@ -15,6 +15,13 @@ materials & additive-manufacturing research profile.
 7. **Certifications** — grid of 10 certificates (`/public/certificates/`) with click-to-enlarge lightbox
 8. **Teaching** — "Teaching Assistant" strip with the Politecnico di Torino group photo (`/public/teaching.jpg`). If the file is missing, a styled gradient placeholder is shown instead.
 
+## CAD portfolio (separate pages)
+
+- `/cad` — bento-grid gallery of 13 SolidWorks models (AI-cutout WebP renders in `/public/cad`)
+- `/cad/<slug>` — detail page per model: large cutout, description, technique chips, details card, prev/next navigation
+- Routing: `react-router-dom` (BrowserRouter). `vercel.json` contains the SPA rewrite so deep links work on Vercel.
+- Model data (titles, descriptions, tile sizes) lives in `src/data/cad.ts`.
+
 ## Local development
 
 ```bash

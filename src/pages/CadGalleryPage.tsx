@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
+import TiltCard from '../components/TiltCard'
 import { cadModels, type CadModel } from '../data/cad'
 
 const sizeClasses: Record<CadModel['size'], string> = {
@@ -12,45 +13,53 @@ const sizeClasses: Record<CadModel['size'], string> = {
 function Tile({ model, index }: { model: CadModel; index: number }) {
   return (
     <FadeIn delay={(index % 4) * 0.06} className={sizeClasses[model.size]}>
-      <Link
-        to={`/cad/${model.slug}`}
-        className="group relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-[#D7E2EA]/10 bg-[#11151b] transition-all duration-300 hover:border-[#D7E2EA]/35 hover:-translate-y-1"
-      >
-        {/* glow backdrop */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-300 group-hover:opacity-100"
-          style={{
-            background:
-              'radial-gradient(75% 60% at 50% 42%, rgba(79,138,163,0.16) 0%, rgba(17,21,27,0) 70%)',
-          }}
-        />
-
-        {/* model cutout */}
-        <div className="relative flex flex-1 items-center justify-center p-5 sm:p-7 min-h-0">
-          <img
-            src={model.image}
-            alt={model.title}
-            loading="lazy"
-            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.06]"
-            style={{ filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.55))' }}
+      <TiltCard className="h-full w-full" maxTilt={6}>
+        <Link
+          to={`/cad/${model.slug}`}
+          className="group relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-[#D7E2EA]/10 bg-[#11151b] transition-colors duration-300 hover:border-[#D7E2EA]/35"
+        >
+          {/* glow backdrop */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+            style={{
+              background:
+                'radial-gradient(75% 60% at 50% 42%, rgba(79,138,163,0.16) 0%, rgba(17,21,27,0) 70%)',
+            }}
           />
-        </div>
 
-        {/* label */}
-        <div className="relative flex items-end justify-between gap-3 p-4 sm:p-5 pt-0">
-          <div className="min-w-0">
-            <p className="truncate text-[#D7E2EA] font-medium text-sm sm:text-base">
-              {model.title}
-            </p>
-            <p className="text-[#D7E2EA]/45 font-light uppercase tracking-widest text-[0.6rem] sm:text-xs mt-0.5">
-              {model.type}
-            </p>
+          {/* model cutout — floats above the card plane while tilting */}
+          <div
+            className="relative flex flex-1 items-center justify-center p-5 sm:p-7 min-h-0"
+            style={{ transform: 'translateZ(34px)' }}
+          >
+            <img
+              src={model.image}
+              alt={model.title}
+              loading="lazy"
+              className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.05]"
+              style={{ filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.55))' }}
+            />
           </div>
-          <span className="shrink-0 rounded-full border border-[#D7E2EA]/25 px-3 py-1 text-[0.6rem] sm:text-xs uppercase tracking-widest text-[#D7E2EA]/60 transition-colors duration-300 group-hover:border-[#D7E2EA]/60 group-hover:text-[#D7E2EA]">
-            View
-          </span>
-        </div>
-      </Link>
+
+          {/* label */}
+          <div
+            className="relative flex items-end justify-between gap-3 p-4 sm:p-5 pt-0"
+            style={{ transform: 'translateZ(16px)' }}
+          >
+            <div className="min-w-0">
+              <p className="truncate text-[#D7E2EA] font-medium text-sm sm:text-base">
+                {model.title}
+              </p>
+              <p className="text-[#D7E2EA]/45 font-light uppercase tracking-widest text-[0.6rem] sm:text-xs mt-0.5">
+                {model.type}
+              </p>
+            </div>
+            <span className="shrink-0 rounded-full border border-[#D7E2EA]/25 px-3 py-1 text-[0.6rem] sm:text-xs uppercase tracking-widest text-[#D7E2EA]/60 transition-colors duration-300 group-hover:border-[#D7E2EA]/60 group-hover:text-[#D7E2EA]">
+              View
+            </span>
+          </div>
+        </Link>
+      </TiltCard>
     </FadeIn>
   )
 }

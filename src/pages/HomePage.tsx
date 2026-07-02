@@ -2,6 +2,7 @@ import HeroSection from '../sections/HeroSection'
 import AboutSection from '../sections/AboutSection'
 import ServicesSection from '../sections/ServicesSection'
 import ProjectsSection from '../sections/ProjectsSection'
+import CadTeaserSection from '../sections/CadTeaserSection'
 import ExperienceSection from '../sections/ExperienceSection'
 import PublicationsSection from '../sections/PublicationsSection'
 import CertificationsSection from '../sections/CertificationsSection'
@@ -15,6 +16,7 @@ export default function HomePage() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
+      <CadTeaserSection />
       <ExperienceSection />
       <PublicationsSection />
       <CertificationsSection />

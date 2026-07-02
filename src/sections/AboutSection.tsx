@@ -3,7 +3,7 @@ import AnimatedText from '../components/AnimatedText'
 import ContactButton from '../components/ContactButton'
 
 const ABOUT_TEXT =
-  "With a master's centred on additive manufacturing, I design porous, lattice-based structures and prove how they behave through X-ray CT, standardised compression testing, and finite-element modelling. I turn structure into measured performance. Let's build something rigorous together!"
+  "I'm a CAD designer and materials researcher who lives in lattices — I design TPMS and functionally graded porous structures in nTopology and SolidWorks, print them by L-PBF, and prove how they perform through ABAQUS simulation, X-ray CT, and compression testing. From unit cell to measured performance!"
 
 // Four research-themed icons, matching the Expertise section's core pillars.
 const decor = {

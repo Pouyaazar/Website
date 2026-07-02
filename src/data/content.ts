@@ -41,6 +41,46 @@ export const services: Service[] = [
 ]
 
 // ---------------------------------------------------------------------------
+// Skills & tools (chip strip under Expertise, from CV)
+// ---------------------------------------------------------------------------
+export type SkillGroup = { label: string; items: string[] }
+
+export const skillGroups: SkillGroup[] = [
+  {
+    label: 'Software',
+    items: [
+      'SolidWorks',
+      'nTopology',
+      'ABAQUS',
+      'Ansys Mechanical',
+      'Python',
+      'MATLAB',
+      'KNIME',
+    ],
+  },
+  {
+    label: 'Methods',
+    items: [
+      'L-PBF',
+      'Design for AM',
+      'TPMS Lattice Design',
+      'X-ray CT',
+      'SEM Fractography',
+      'ISO 13314 Compression',
+      '3-Point Bending',
+      'Vickers Indentation',
+      'Gibson–Ashby Scaling',
+      'FEA',
+      'Supervised ML',
+    ],
+  },
+  {
+    label: 'Materials',
+    items: ['AlSi10Mg', 'Ti-6Al-4V', 'Advanced Ceramics', 'NiTi', 'Steel'],
+  },
+]
+
+// ---------------------------------------------------------------------------
 // Projects (sticky stacking cards)
 // ---------------------------------------------------------------------------
 export type Project = {

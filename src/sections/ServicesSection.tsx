@@ -1,5 +1,5 @@
 import FadeIn from '../components/FadeIn'
-import { services } from '../data/content'
+import { services, skillGroups } from '../data/content'
 
 const BORDER = '1px solid rgba(12, 12, 12, 0.15)'
 
@@ -58,6 +58,45 @@ export default function ServicesSection() {
             </div>
           </FadeIn>
         ))}
+
+        {/* Skills & tools chip strip */}
+        <FadeIn delay={0.1} className="pt-14 sm:pt-16 md:pt-20">
+          <h3
+            className="font-medium uppercase tracking-widest mb-8 sm:mb-10"
+            style={{ color: '#0C0C0C', opacity: 0.45, fontSize: 'clamp(0.8rem, 1.4vw, 1rem)' }}
+          >
+            Toolbox
+          </h3>
+          <div className="flex flex-col gap-7 sm:gap-8">
+            {skillGroups.map((group) => (
+              <div
+                key={group.label}
+                className="grid gap-3 sm:grid-cols-[130px_1fr] sm:gap-6 items-baseline"
+              >
+                <span
+                  className="font-medium uppercase tracking-widest text-xs sm:text-sm"
+                  style={{ color: '#0C0C0C', opacity: 0.55 }}
+                >
+                  {group.label}
+                </span>
+                <div className="flex flex-wrap gap-2 sm:gap-2.5">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors duration-200 hover:bg-[#0C0C0C] hover:text-white"
+                      style={{
+                        color: '#0C0C0C',
+                        borderColor: 'rgba(12, 12, 12, 0.25)',
+                      }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

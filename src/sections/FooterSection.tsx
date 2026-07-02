@@ -1,5 +1,17 @@
-import { Mail, Linkedin, BookOpen, MapPin, Download } from 'lucide-react'
+import {
+  Mail,
+  Linkedin,
+  BookOpen,
+  MapPin,
+  Download,
+  GraduationCap,
+  Fingerprint,
+} from 'lucide-react'
 import FadeIn from '../components/FadeIn'
+
+// Fill these in once the profiles exist — empty string hides the link.
+const GOOGLE_SCHOLAR_URL = ''
+const ORCID_URL = ''
 
 const links = [
   {
@@ -18,11 +30,23 @@ const links = [
     href: 'https://www.researchgate.net/profile/Pouya-Azarandaz',
   },
   {
+    icon: GraduationCap,
+    label: 'Google Scholar',
+    href: GOOGLE_SCHOLAR_URL || undefined,
+    hideIfMissing: true,
+  },
+  {
+    icon: Fingerprint,
+    label: 'ORCID',
+    href: ORCID_URL || undefined,
+    hideIfMissing: true,
+  },
+  {
     icon: MapPin,
     label: 'Torino, Italy',
     href: undefined as string | undefined,
   },
-]
+].filter((l) => !('hideIfMissing' in l && l.hideIfMissing && !l.href))
 
 export default function FooterSection() {
   return (

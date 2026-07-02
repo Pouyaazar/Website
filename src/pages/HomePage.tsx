@@ -1,3 +1,4 @@
+import useDocumentTitle from '../hooks/useDocumentTitle'
 import HeroSection from '../sections/HeroSection'
 import AboutSection from '../sections/AboutSection'
 import ServicesSection from '../sections/ServicesSection'
@@ -10,6 +11,7 @@ import TeachingSection from '../sections/TeachingSection'
 import FooterSection from '../sections/FooterSection'
 
 export default function HomePage() {
+  useDocumentTitle('Pouya Azarandaz — Materials & AM Researcher')
   return (
     <main style={{ background: '#0C0C0C', overflowX: 'clip' }}>
       <HeroSection />

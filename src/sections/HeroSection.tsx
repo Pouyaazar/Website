@@ -1,17 +1,9 @@
-import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import Magnet from '../components/Magnet'
+import Navbar from '../components/Navbar'
 import ContactButton from '../components/ContactButton'
 
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Expertise', href: '#expertise' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'CAD', href: '/cad' },
-  { label: 'Contact', href: '#contact' },
-]
-
-const PORTRAIT_URL = '/portrait.png'
+const PORTRAIT_URL = '/portrait.webp'
 
 export default function HeroSection() {
   return (
@@ -19,27 +11,8 @@ export default function HeroSection() {
       className="relative h-screen flex flex-col"
       style={{ overflowX: 'clip' }}
     >
-      {/* Navbar */}
-      <FadeIn
-        as="nav"
-        delay={0}
-        y={-20}
-        className="relative z-20 flex items-center justify-between px-6 md:px-10 pt-6 md:pt-8"
-      >
-        {navLinks.map((link) => {
-          const cls =
-            'text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70'
-          return link.href.startsWith('#') ? (
-            <a key={link.label} href={link.href} className={cls}>
-              {link.label}
-            </a>
-          ) : (
-            <Link key={link.label} to={link.href} className={cls}>
-              {link.label}
-            </Link>
-          )
-        })}
-      </FadeIn>
+      {/* Navbar (desktop inline links + mobile slide-in menu) */}
+      <Navbar />
 
       {/* Hero heading */}
       <div className="px-6 md:px-10 overflow-hidden">

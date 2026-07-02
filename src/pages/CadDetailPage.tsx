@@ -1,11 +1,16 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Box, Layers } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
+import useDocumentTitle from '../hooks/useDocumentTitle'
 import { cadModels, getCadModel } from '../data/cad'
 
 export default function CadDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const model = slug ? getCadModel(slug) : undefined
+
+  useDocumentTitle(
+    model ? `${model.title} — CAD Portfolio · Pouya Azarandaz` : undefined,
+  )
 
   if (!model) return <Navigate to="/cad" replace />
 

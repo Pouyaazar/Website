@@ -1,31 +1,4 @@
 // ---------------------------------------------------------------------------
-// Marquee preview GIFs (21 total) from motionsites.ai
-// ---------------------------------------------------------------------------
-// Real figures from the M.Sc. thesis, used in the scrolling marquee strip.
-export const marqueeImages: string[] = [
-  '/thesis/tpms-cells.jpg',
-  '/thesis/lattice-cube-a.jpg',
-  '/thesis/sem-micrograph.jpg',
-  '/thesis/fea-cube.jpg',
-  '/thesis/lattice-array.jpg',
-  '/thesis/lpbf-printer.jpg',
-  '/thesis/ebsd.jpg',
-  '/thesis/fractography.jpg',
-  '/thesis/void-fraction.jpg',
-  '/thesis/lattice-row.jpg',
-  '/thesis/lab-equipment.jpg',
-  '/thesis/lattice-samples.jpg',
-  '/thesis/control-panel.jpg',
-  '/thesis/test-rig.jpg',
-  '/thesis/stress-strain.jpg',
-  '/thesis/lattice-cubes-row.jpg',
-  '/thesis/fractography2.jpg',
-  '/thesis/powder-grid.jpg',
-  '/thesis/compression-curves.jpg',
-  '/thesis/lpbf-schematic.jpg',
-]
-
-// ---------------------------------------------------------------------------
 // Service list
 // ---------------------------------------------------------------------------
 export type Service = {

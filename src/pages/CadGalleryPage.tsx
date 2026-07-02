@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
 import TiltCard from '../components/TiltCard'
+import useDocumentTitle from '../hooks/useDocumentTitle'
 import { cadModels, type CadModel } from '../data/cad'
 
 const sizeClasses: Record<CadModel['size'], string> = {
@@ -65,6 +66,7 @@ function Tile({ model, index }: { model: CadModel; index: number }) {
 }
 
 export default function CadGalleryPage() {
+  useDocumentTitle('CAD Portfolio — Pouya Azarandaz')
   return (
     <div style={{ background: '#0C0C0C' }} className="min-h-screen">
       {/* Minimal nav */}

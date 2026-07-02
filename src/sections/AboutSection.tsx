@@ -3,7 +3,7 @@ import AnimatedText from '../components/AnimatedText'
 import ContactButton from '../components/ContactButton'
 
 const ABOUT_TEXT =
-  "With a master's centred on additive manufacturing, i design porous, lattice-based structures and prove how they behave through x-ray ct, standardised compression testing, and finite-element modelling. i turn structure into measured performance. Let's build something rigorous together!"
+  "With a master's centred on additive manufacturing, I design porous, lattice-based structures and prove how they behave through X-ray CT, standardised compression testing, and finite-element modelling. I turn structure into measured performance. Let's build something rigorous together!"
 
 // Four research-themed icons, matching the Expertise section's core pillars.
 const decor = {

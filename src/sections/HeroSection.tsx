@@ -22,7 +22,7 @@ export default function HeroSection() {
           y={40}
           className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full mt-6 sm:mt-4 md:-mt-5 text-[12vw]"
         >
-          Hi, I&apos;m Pouya
+          &nbsp; &nbsp; &nbsp;Hi, I&apos;m Pouya
         </FadeIn>
       </div>
 
@@ -31,10 +31,10 @@ export default function HeroSection() {
         <FadeIn
           delay={0.35}
           y={20}
-          className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
+          className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug text-center max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
           style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
         >
-          a materials &amp; additive-manufacturing researcher shaping porous
+          a mechanical &amp; additive-manufacturing researcher shaping porous
           structures through design, testing, and simulation
         </FadeIn>
 

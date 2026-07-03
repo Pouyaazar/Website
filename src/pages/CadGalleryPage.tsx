@@ -24,7 +24,7 @@ function Tile({ model, index }: { model: CadModel; index: number }) {
             className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-300 group-hover:opacity-100"
             style={{
               background:
-                'radial-gradient(75% 60% at 50% 42%, rgba(79,138,163,0.16) 0%, rgba(17,21,27,0) 70%)',
+                'radial-gradient(75% 60% at 50% 42%, rgba(79,141,251,0.18) 0%, rgba(17,21,27,0) 70%)',
             }}
           />
 

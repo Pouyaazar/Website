@@ -21,7 +21,7 @@ function Timeline({
             className="relative pl-7 pb-9 last:pb-0 border-l border-[#D7E2EA]/15 last:border-l-0"
           >
             {/* dot */}
-            <span className="absolute left-0 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-[#D7E2EA]" />
+            <span className="absolute left-0 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-[#4F8DFB]" />
             {/* keep the rail visible on the last item too */}
             {i === entries.length - 1 && (
               <span className="absolute left-0 top-1.5 bottom-0 w-px bg-[#D7E2EA]/15 -z-10" />

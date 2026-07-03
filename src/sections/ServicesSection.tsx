@@ -1,18 +1,18 @@
 import FadeIn from '../components/FadeIn'
 import { services, skillGroups } from '../data/content'
 
-const BORDER = '1px solid rgba(12, 12, 12, 0.15)'
+const BORDER = '1px solid rgba(215, 226, 234, 0.15)'
 
 export default function ServicesSection() {
   return (
     <section
       id="expertise"
       className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
-      style={{ background: '#FFFFFF' }}
+      style={{ background: '#11161D' }}
     >
       <h2
         className="text-center font-black uppercase mb-16 sm:mb-20 md:mb-28"
-        style={{ color: '#0C0C0C', fontSize: 'clamp(3rem, 12vw, 160px)' }}
+        style={{ color: '#D7E2EA', fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
         Expertise
       </h2>
@@ -30,7 +30,7 @@ export default function ServicesSection() {
           >
             <span
               className="font-black leading-none"
-              style={{ color: '#0C0C0C', fontSize: 'clamp(3rem, 10vw, 140px)' }}
+              style={{ color: '#4F8DFB', fontSize: 'clamp(3rem, 10vw, 140px)' }}
             >
               {service.num}
             </span>
@@ -39,7 +39,7 @@ export default function ServicesSection() {
               <h3
                 className="font-medium uppercase"
                 style={{
-                  color: '#0C0C0C',
+                  color: '#D7E2EA',
                   fontSize: 'clamp(1rem, 2.2vw, 2.1rem)',
                 }}
               >
@@ -48,8 +48,8 @@ export default function ServicesSection() {
               <p
                 className="font-light leading-relaxed max-w-2xl"
                 style={{
-                  color: '#0C0C0C',
-                  opacity: 0.6,
+                  color: '#D7E2EA',
+                  opacity: 0.65,
                   fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)',
                 }}
               >
@@ -63,7 +63,7 @@ export default function ServicesSection() {
         <FadeIn delay={0.1} className="pt-14 sm:pt-16 md:pt-20">
           <h3
             className="font-medium uppercase tracking-widest mb-8 sm:mb-10"
-            style={{ color: '#0C0C0C', opacity: 0.45, fontSize: 'clamp(0.8rem, 1.4vw, 1rem)' }}
+            style={{ color: '#D7E2EA', opacity: 0.45, fontSize: 'clamp(0.8rem, 1.4vw, 1rem)' }}
           >
             Toolbox
           </h3>
@@ -75,7 +75,7 @@ export default function ServicesSection() {
               >
                 <span
                   className="font-medium uppercase tracking-widest text-xs sm:text-sm"
-                  style={{ color: '#0C0C0C', opacity: 0.55 }}
+                  style={{ color: '#D7E2EA', opacity: 0.55 }}
                 >
                   {group.label}
                 </span>
@@ -83,10 +83,10 @@ export default function ServicesSection() {
                   {group.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors duration-200 hover:bg-[#0C0C0C] hover:text-white"
+                      className="rounded-full border px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors duration-200 hover:bg-[#4F8DFB] hover:text-white hover:border-[#4F8DFB]"
                       style={{
-                        color: '#0C0C0C',
-                        borderColor: 'rgba(12, 12, 12, 0.25)',
+                        color: '#D7E2EA',
+                        borderColor: 'rgba(215, 226, 234, 0.25)',
                       }}
                     >
                       {item}

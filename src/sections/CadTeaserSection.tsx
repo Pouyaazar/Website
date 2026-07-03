@@ -22,7 +22,7 @@ export default function CadTeaserSection() {
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  'radial-gradient(60% 80% at 75% 45%, rgba(79,138,163,0.18) 0%, rgba(17,21,27,0) 70%)',
+                  'radial-gradient(60% 80% at 75% 45%, rgba(79,141,251,0.2) 0%, rgba(17,21,27,0) 70%)',
               }}
             />
 

@@ -45,7 +45,7 @@ export default function CadDetailPage() {
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                'radial-gradient(55% 55% at 50% 50%, rgba(79,138,163,0.20) 0%, rgba(12,12,12,0) 70%)',
+                'radial-gradient(55% 55% at 50% 50%, rgba(79,141,251,0.22) 0%, rgba(12,12,12,0) 70%)',
             }}
           />
           <img

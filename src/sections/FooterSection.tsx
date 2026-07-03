@@ -80,9 +80,8 @@ export default function FooterSection() {
           className="inline-flex items-center gap-2 rounded-full text-white font-medium uppercase tracking-widest text-xs sm:text-sm px-8 py-3.5 sm:px-10 sm:py-4 transition-transform duration-200 hover:scale-[1.03]"
           style={{
             background:
-              'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
-            boxShadow:
-              '0px 4px 4px rgba(181, 1, 167, 0.25), 4px 4px 12px #7721B1 inset',
+              'linear-gradient(135deg, #2f6bd8 0%, #4f8dfb 55%, #37c2e0 100%)',
+            boxShadow: '0 4px 24px rgba(79, 141, 251, 0.4)',
             outline: '2px solid #ffffff',
             outlineOffset: '-3px',
           }}

@@ -7,6 +7,7 @@ Cloud sessions run `scripts/setup.sh` at start (hook in `.claude/settings.json`)
 - **FFmpeg** (frames, cuts, audio, conversion)
 - **faster-whisper** (word-level transcripts)
 - **HyperFrames** via `npx hyperframes` + its headless Chrome for rendering
+- **HyperFrames Claude plugin** (`hyperframes@hyperframes`), enabled in `.claude/settings.json`
 - Node.js 22 and Python 3 come with the environment
 
 Check it anytime: `npx hyperframes doctor`.

@@ -1,0 +1,10 @@
+# Media stays out of git
+inbox/
+renders/
+*.mp4
+*.mov
+*.webm
+*.m4a
+*.wav
+*.mp3
+*_frames/
